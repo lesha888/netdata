@@ -35,4 +35,5 @@ ln -sf /dev/stderr /var/log/netdata/error.log
 
 echo 'mysql_cmds[local]="/usr/bin/mysql"
 mysql_opts[local]="-h ${MYSQL_LOCAL_HOST} --user=${MYSQL_LOCAL_USER} --password=${MYSQL_LOCAL_PASSWORD} --port=${MYSQL_LOCAL_PORT} "
+mysql_update_every[local]="1"
 '>  /etc/netdata/mysql.conf
