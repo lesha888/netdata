@@ -33,7 +33,7 @@ ln -sf /dev/stdout /var/log/netdata/access.log
 ln -sf /dev/stdout /var/log/netdata/debug.log
 ln -sf /dev/stderr /var/log/netdata/error.log
 
-cat <<DATA
+cat > /etc/netdata/mysql.conf  <<EOF
 mysql_cmds[local]="/usr/bin/mysql"
 mysql_opts[local]="-h ${MYSQL_LOCAL_HOST} -u ${MYSQL_LOCAL_USER} -p ${MYSQL_LOCAL_PASSWORD} --port=${MYSQL_LOCAL_PORT} "
-DATA > /etc/netdata/mysql.conf 
+EOF
